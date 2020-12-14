@@ -6,8 +6,20 @@ import gbp from "../img/gbp.png";
 import nok from "../img/nok.png";
 import jpy from "../img/jpy.png";
 import "../css/ratelist.css";
+import axios from "axios";
 
 export default function Rates() {
+  React.useEffect(() => {
+    getCurrentRate("USD");
+  }, []);
+  const getCurrentRate = (rateName) => {
+    let getLink = `https://api.ratesapi.io/api/latest?base=${rateName}&symbols=TRY`;
+    axios
+      .get(getLink)
+      .then((rates) => console.log(rates.data))
+      .catch((err) => console.log(err.message));
+  };
+
   return (
     <>
       <section>
@@ -42,8 +54,8 @@ export default function Rates() {
                 <h2>eur</h2>
                 <p>avrupa para birimi</p>
               </div>
-              <div class="rate-container">
-                <div class="box box-2">
+              <div className="rate-container">
+                <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
                   <p className="rate-value">6.8399</p>
                 </div>

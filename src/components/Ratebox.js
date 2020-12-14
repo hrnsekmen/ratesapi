@@ -5,21 +5,21 @@ import "../css/ratebox.css";
 export default function Ratebox() {
   return (
     <section>
-      <article class="rate-form">
+      <article className="rate-form">
         <h3>döviz çevir</h3>
         <form>
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="text"
               placeholder="1.000.000"
-              class="form-control"
+              className="form-control"
               name="name"
             />
-            <img src={change} class="swap-btn form-control" alt="swap" />
+            <img src={change} className="swap-btn form-control" alt="swap" />
             <input
               type="text"
               placeholder="6.789.456,99"
-              class="form-control"
+              className="form-control"
               name="name"
             />
           </div>
