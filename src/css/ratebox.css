@@ -1,0 +1,47 @@
+/* 
+=========
+Rate Box
+=========
+*/
+
+.rate-form,
+.rate-info {
+  margin: 2rem 0 1rem 0;
+}
+.rate-form {
+  background: var(--linear-bg);
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  max-width: 100%;
+}
+.rate-form h3 {
+  padding: 2rem;
+  color: var(--clr-white);
+}
+.form-group {
+  padding: 0 1.5rem 0.3rem 1.5rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 1rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: var(--clr-white);
+  text-transform: uppercase;
+}
+.form-control::placeholder {
+  color: var(--clr-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.swap-btn {
+  width: auto;
+  margin: 0 auto;
+  margin-top: -1rem;
+  cursor: pointer;
+  background: transparent;
+  padding-bottom: 1rem;
+}

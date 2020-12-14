@@ -1,0 +1,63 @@
+/* 
+=========
+Button Design
+=========
+*/
+
+.btn {
+  color: var(--clr-primary);
+  text-transform: capitalize;
+  margin: 0.6rem 0;
+  transition: var(--transition);
+  border: 0.2rem solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 1.7rem;
+  width: 100%;
+  letter-spacing: 0.94px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: var(--clr-white);
+}
+/* dark btn */
+.details-btn {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+.details-btn:hover {
+  color: var(--clr-primary-1);
+  background: var(--clr-primary-8);
+}
+/* white btn */
+.btn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.btn-flex:hover {
+  background: var(--clr-primary);
+}
+.btn-flex:hover p {
+  color: var(--clr-white);
+}
+
+.arrow-icon {
+  width: auto;
+  margin: 0 0 0 4px;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1500px) {
+  .btn-group {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+  .arrow-icon {
+    display: none;
+  }
+  .btn-flex:hover p {
+    color: white;
+  }
+}
