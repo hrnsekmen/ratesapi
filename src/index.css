@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 
+==============
+Fonts
+==============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/* 
+==============
+Variables
+==============
+*/
+
+:root {
+  --clr-primary: #2b3b48;
+  --clr-secondary: #4f6477;
+  --clr-extra: #8093a5;
+  --clr-white: #ffffff;
+  --clr-line: #e6ecf0;
+  --clr-border: #eaeef2;
+  --ff-primary: "Roboto Medium", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --linear-bg: linear-gradient(146deg, #2b3b48 34%, #8093a5 110%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-white);
+  color: var(--clr-primary);
+  /* line-height: 1.5; */
+}
+
+/* 
+==============
+Global Styles
+==============
+*/
+
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  padding-bottom: 0.5rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: var(--clr-primary);
+  line-height: 1;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* global classes */
+
+header {
+  padding: 1.5rem 4rem;
+}
+section {
+  padding: 0 4rem;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+/* 1500 px general settings */
+
+@media screen and (min-width: 1500px) {
+  body {
+    padding-top: 13rem;
+  }
+  header {
+    padding: 1.5rem 10rem;
+  }
+  section {
+    padding: 0 10rem;
+    display: block;
+  }
+  .header-text {
+    font-size: 3rem;
+  }
 }
