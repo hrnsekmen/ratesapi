@@ -4,10 +4,12 @@ import "../css/buttons.css";
 export default function Buttons() {
   return (
     <section className="btn-group">
-      <button className="btn details-btn">detaylı bilgi</button>
-      <button class="btn btn-flex">
+      {/* dark btn */}
+      <button className="btn details-btn btn-1">detaylı bilgi</button>
+      {/* white btn */}
+      <button className="btn btn-flex btn-2">
         <p>Tüm piyasalar</p>
-        <img class="arrow-icon" src={arrow} alt="arrow" />
+        <img className="arrow-icon" src={arrow} alt="arrow" />
       </button>
     </section>
   );

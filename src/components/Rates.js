@@ -6,8 +6,13 @@ import gbp from "../img/gbp.png";
 import nok from "../img/nok.png";
 import jpy from "../img/jpy.png";
 import "../css/ratelist.css";
+import { connect } from "react-redux";
+import { getCurrentRates } from "../redux/action";
 
-export default function Rates() {
+const Rates = ({ getCurrentRates, USD, JPY, DKK, EUR, GBP, NOK }) => {
+  React.useEffect(() => {
+    getCurrentRates();
+  }, [getCurrentRates]);
   return (
     <>
       <section>
@@ -24,11 +29,11 @@ export default function Rates() {
               <div className="rate-container">
                 <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
-                  <p className="rate-value">6.8399</p>
+                  <p className="rate-value">{USD}</p>
                 </div>
                 <div className="box box-3">
                   <h2 className="rate-spec">satış</h2>
-                  <p className="rate-value">6.8752</p>
+                  <p className="rate-value">{USD}</p>
                 </div>
               </div>
             </div>
@@ -42,14 +47,14 @@ export default function Rates() {
                 <h2>eur</h2>
                 <p>avrupa para birimi</p>
               </div>
-              <div class="rate-container">
-                <div class="box box-2">
+              <div className="rate-container">
+                <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
-                  <p className="rate-value">6.8399</p>
+                  <p className="rate-value">{EUR}</p>
                 </div>
                 <div className="box box-3">
                   <h2 className="rate-spec">satış</h2>
-                  <p className="rate-value">6.8752</p>
+                  <p className="rate-value">{EUR}</p>
                 </div>
               </div>
             </div>
@@ -66,11 +71,11 @@ export default function Rates() {
               <div className="rate-container">
                 <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
-                  <p className="rate-value">6.8399</p>
+                  <p className="rate-value">{JPY}</p>
                 </div>
                 <div className="box box-3">
                   <h2 className="rate-spec">satış</h2>
-                  <p className="rate-value">6.8752</p>
+                  <p className="rate-value">{JPY}</p>
                 </div>
               </div>
             </div>
@@ -91,11 +96,11 @@ export default function Rates() {
               <div className="rate-container">
                 <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
-                  <p className="rate-value">6.8399</p>
+                  <p className="rate-value">{GBP}</p>
                 </div>
                 <div className="box box-3">
                   <h2 className="rate-spec">satış</h2>
-                  <p className="rate-value">6.8752</p>
+                  <p className="rate-value">{GBP}</p>
                 </div>
               </div>
             </div>
@@ -112,11 +117,11 @@ export default function Rates() {
               <div className="rate-container">
                 <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
-                  <p className="rate-value">6.8399</p>
+                  <p className="rate-value">{DKK}</p>
                 </div>
                 <div className="box box-3">
                   <h2 className="rate-spec">satış</h2>
-                  <p className="rate-value">6.8752</p>
+                  <p className="rate-value">{DKK}</p>
                 </div>
               </div>
             </div>
@@ -133,11 +138,11 @@ export default function Rates() {
               <div className="rate-container">
                 <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
-                  <p className="rate-value">6.8399</p>
+                  <p className="rate-value">{NOK}</p>
                 </div>
                 <div className="box box-3">
                   <h2 className="rate-spec">satış</h2>
-                  <p className="rate-value">6.8752</p>
+                  <p className="rate-value">{NOK}</p>
                 </div>
               </div>
             </div>
@@ -150,4 +155,16 @@ export default function Rates() {
       </section>
     </>
   );
-}
+};
+
+const mapStateToProps = (state) => {
+  return {
+    USD: state.USD,
+    JPY: state.JPY,
+    DKK: state.DKK,
+    EUR: state.EUR,
+    GBP: state.GBP,
+    NOK: state.NOK,
+  };
+};
+export default connect(mapStateToProps, { getCurrentRates })(Rates);
