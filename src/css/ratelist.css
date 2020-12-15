@@ -8,6 +8,7 @@ Section - Rate List
   width: 43px;
   height: 30px;
   margin: 0 1rem 1rem 0;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 .container {
@@ -103,6 +104,7 @@ Section - Rate List
     width: 43px;
     height: 30px;
     margin: auto;
+    -o-object-fit: contain;
     object-fit: contain;
   }
   .container {

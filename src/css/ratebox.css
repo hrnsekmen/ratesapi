@@ -22,26 +22,90 @@ Rate Box
 .form-group {
   padding: 0 1.5rem 0.3rem 1.5rem;
 }
-.form-control {
-  display: block;
+.form-control,
+.select-box {
   width: 100%;
-  padding: 1rem 1rem;
   border: none;
+  padding: 1rem 1rem;
   margin-bottom: 1.25rem;
   background: var(--clr-white);
   text-transform: uppercase;
+}
+.form-control::-webkit-input-placeholder {
+  color: var(--clr-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  top: 0.1rem;
+}
+.form-control::-moz-placeholder {
+  color: var(--clr-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  top: 0.1rem;
+}
+.form-control:-ms-input-placeholder {
+  color: var(--clr-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  top: 0.1rem;
+}
+.form-control::-ms-input-placeholder {
+  color: var(--clr-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  top: 0.1rem;
 }
 .form-control::placeholder {
   color: var(--clr-primary);
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
+  position: relative;
+  top: 0.1rem;
 }
 .swap-btn {
   width: auto;
   margin: 0 auto;
   margin-top: -1rem;
-  cursor: pointer;
   background: transparent;
   padding-bottom: 1rem;
+}
+.selection-input {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.select-box {
+  font-weight: bold;
+  color: var(--clr-primary);
+  flex: 65%;
+  font-size: 0.95rem;
+  border-left: var(--clr-primary) solid 0.1rem;
+}
+.result-bar {
+  display: flex;
+}
+.tl-box {
+  background: white;
+  font-size: 1rem;
+  padding: 1rem;
+  max-height: 70%;
+  align-self: flex-end;
+}
+input[type="text"] {
+  font-weight: bold;
+  color: var(--clr-primary);
+}
+@media screen and (min-width: 1500px) {
+  .rate-form {
+    left: 75rem;
+    min-width: 300px;
+  }
 }

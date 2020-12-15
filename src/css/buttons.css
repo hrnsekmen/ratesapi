@@ -45,19 +45,30 @@ Button Design
 .arrow-icon {
   width: auto;
   margin: 0 0 0 4px;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
 @media screen and (min-width: 1500px) {
-  .btn-group {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-  }
-  .arrow-icon {
-    display: none;
-  }
   .btn-flex:hover p {
     color: white;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: start;
+  }
+
+  .btn-1 {
+    margin-right: 7.8rem;
+    max-width: 25rem;
+  }
+  .btn-2 {
+    border: 2px solid var(--clr-primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 25rem;
+  }
+
+  .arrow-icon {
+    display: none;
   }
 }
