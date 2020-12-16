@@ -11,8 +11,7 @@ const Ratebox = ({ USD, JPY, DKK, EUR, GBP, NOK }) => {
   React.useEffect(() => {
     setBaseRate(USD);
   }, [USD]);
-
-  const handleFirstValue = (inputValue) => {
+  const exchangeCurrency = (inputValue) => {
     const number = Number(inputValue);
     if (!isNaN(number)) {
       setFirstValue(number);
@@ -28,16 +27,13 @@ const Ratebox = ({ USD, JPY, DKK, EUR, GBP, NOK }) => {
     <section>
       <article className="rate-form">
         <h3>döviz çevir</h3>
-        <form>
+        <form onClick={() => setSecondValue(baseRate * firstValue)}>
           <div className="form-group">
             <div className="selection-input">
               <select
                 className="select-box"
                 onChange={(e) => {
-                  const selectedBase = e.target.value;
-                  setBaseRate(selectedBase);
-                  setFirstValue([]);
-                  setSecondValue([]);
+                  setBaseRate(e.target.value);
                 }}
               >
                 <option value={USD}>USD</option>
@@ -48,7 +44,7 @@ const Ratebox = ({ USD, JPY, DKK, EUR, GBP, NOK }) => {
                 <option value={NOK}>NOK</option>
               </select>
               <input
-                onChange={(e) => handleFirstValue(e.target.value)}
+                onChange={(e) => exchangeCurrency(e.target.value)}
                 type="text"
                 placeholder="1.000.000"
                 value={firstValue}
