@@ -22,15 +22,18 @@ const Rates = ({ getCurrentRates, USD, JPY, DKK, EUR, GBP, NOK }) => {
             {/* Rate 1 */}
             <div className="container">
               <img src={usd} alt="img" className="box-0 img-container" />
+
               <div className="box box-1">
                 <h2>usd</h2>
                 <p>amerikan doları</p>
               </div>
+
               <div className="rate-container">
                 <div className="box box-2">
                   <h2 className="rate-spec">alış</h2>
                   <p className="rate-value">{USD}</p>
                 </div>
+
                 <div className="box box-3">
                   <h2 className="rate-spec">satış</h2>
                   <p className="rate-value">{USD}</p>

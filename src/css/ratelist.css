@@ -94,39 +94,26 @@ Section - Rate List
   }
 }
 
-/* VERY SMALL SCREEN */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1500px) {
   .header-text {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.3rem;
   }
-  .img-container {
-    width: 43px;
-    height: 30px;
-    margin: auto;
-    -o-object-fit: contain;
-    object-fit: contain;
+
+  .box-1 h2 {
+    font-size: 1rem;
   }
-  .container {
-    flex-direction: column;
-  }
-  .container h2 {
-    text-transform: uppercase;
-    padding-bottom: 0.5rem;
-    text-align: center;
-    padding: 1rem;
+
+  .box-1 p {
+    font-size: 0.7rem;
   }
   .rate-container {
-    display: flex;
     justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
-  .box-1 p {
-    text-align: center;
-    font-size: 0.8rem;
+  .box-1 {
+    flex: 70%;
   }
-  .rate-spec {
-    text-align: center;
+  .rate-value {
+    font-size: 0.9rem;
   }
 }
